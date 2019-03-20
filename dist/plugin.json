@@ -1,0 +1,25 @@
+{
+  "type": "panel",
+  "name": "Reason Codes Tree Panel",
+  "id": "smart-factory-reason-codes-crud-tree-chart-panel",
+
+  "info": {
+    "description": "Reason Codes Tree for user to CRUD the database",
+    "keywords": ["panel"],
+    "links": [
+      {"name": "Project site", "url": "https://github.com/Billiballa/grafana-table-panel"}
+    ],
+    "version": "1.0.0",
+    "updated": "2017-06-23"
+  },
+  
+  "logos": {
+    "small": "img/icn-table-panel.svg",
+    "large": "img/icn-table-panel.svg"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "4.x.x",
+    "plugins": [ ]
+  }
+}
