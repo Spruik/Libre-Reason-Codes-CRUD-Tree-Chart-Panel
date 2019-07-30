@@ -134,7 +134,7 @@ export const writeProductionLine = data => {
   }
 
   export const writeLine  = (data) => {
-    let postgresUrl = postgRestHost + 'reason_codes?category_id=eq.' + data.info.category
+    let postgresUrl = postgRestHost + 'reason_code?category_id=eq.' + data.info.category
     // + '&area=eq.' + rowData.Area + '&line=eq.' + rowData.Line
     switch (data.type) {
       case 'Category': break;

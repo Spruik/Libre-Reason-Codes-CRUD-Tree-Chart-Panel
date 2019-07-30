@@ -116,7 +116,7 @@ System.register(['./utils', 'angular'], function (_export, _context) {
     }
 
     var line = writeInsertionLine(input, node);
-    var url = utils.postgRestHost + 'reason_codes';
+    var url = utils.postgRestHost + 'reason_code';
     utils.post(url, line).then(function (res) {
       // console.log(res)
       $('#master-data-reason-code-add-child-cancelBtn').trigger('click');

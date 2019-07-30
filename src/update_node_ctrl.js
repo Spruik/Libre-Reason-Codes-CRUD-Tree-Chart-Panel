@@ -121,7 +121,7 @@ function startUpdate(input, node, panelCtrl, allData) {
   const line = makeLine(input, node)
 
   if (node.type === 'Parent Reason' || node.type === 'Reason') {
-    let postgresUrl = utils.postgRestHost + 'reason_codes?category_id=eq.' + node.info.category
+    let postgresUrl = utils.postgRestHost + 'reason_code?category_id=eq.' + node.info.category
     const childUrl = postgresUrl += '&reason_id=not.is.null' + '&parent_reason_id=eq.' + node.name
     const childLine = 'parent_reason_id=' + input
     updateForReasons(url, line, childUrl, childLine, panelCtrl)

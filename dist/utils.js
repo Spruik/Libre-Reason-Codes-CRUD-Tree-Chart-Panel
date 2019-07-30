@@ -172,7 +172,7 @@ System.register(['app/core/core'], function (_export, _context) {
       _export('writeProductionLine', writeProductionLine);
 
       _export('writeLine', writeLine = function writeLine(data) {
-        var postgresUrl = postgRestHost + 'reason_codes?category_id=eq.' + data.info.category;
+        var postgresUrl = postgRestHost + 'reason_code?category_id=eq.' + data.info.category;
         // + '&area=eq.' + rowData.Area + '&line=eq.' + rowData.Line
         switch (data.type) {
           case 'Category':

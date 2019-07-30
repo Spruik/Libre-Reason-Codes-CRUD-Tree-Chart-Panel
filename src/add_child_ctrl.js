@@ -106,7 +106,7 @@ function insertNode(input, node, panelCtrl, allData){
   if (!isInputValid(input, node, allData)) {return}
 
   const line = writeInsertionLine(input, node)
-  const url = utils.postgRestHost + 'reason_codes'
+  const url = utils.postgRestHost + 'reason_code'
   utils.post(url, line).then(res => {
     // console.log(res)
     $('#master-data-reason-code-add-child-cancelBtn').trigger('click')

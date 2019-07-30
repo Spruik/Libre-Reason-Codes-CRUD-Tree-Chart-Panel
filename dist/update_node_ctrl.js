@@ -133,7 +133,7 @@ System.register(['./utils'], function (_export, _context) {
     var line = makeLine(input, node);
 
     if (node.type === 'Parent Reason' || node.type === 'Reason') {
-      var postgresUrl = utils.postgRestHost + 'reason_codes?category_id=eq.' + node.info.category;
+      var postgresUrl = utils.postgRestHost + 'reason_code?category_id=eq.' + node.info.category;
       var childUrl = postgresUrl += '&reason_id=not.is.null' + '&parent_reason_id=eq.' + node.name;
       var childLine = 'parent_reason_id=' + input;
       updateForReasons(url, line, childUrl, childLine, panelCtrl);
