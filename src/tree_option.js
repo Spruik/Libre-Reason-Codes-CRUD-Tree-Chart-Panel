@@ -1,5 +1,4 @@
 export function generateOption (data) {
-
   const option = {
     tooltip: {
       trigger: 'item',
@@ -17,7 +16,7 @@ export function generateOption (data) {
       borderColor: 'lightgray',
       borderWidth: 0.5,
       textStyle: {
-          color: 'black'
+        color: 'black'
       }
     },
     series: [
