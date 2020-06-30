@@ -159,4 +159,4 @@ export class ChartCtrl extends MetricsPanelCtrl {
   }
 }
 
-ChartCtrl.templateUrl = './partials/module.html'
+ChartCtrl.templateUrl = 'public/plugins/libre-reason-codes-crud-tree-chart-panel/partials/module.html'

@@ -1,26 +1,36 @@
 {
-  "type": "panel",
+  "id": "libre-reason-codes-crud-tree-chart-panel",
   "name": "Reason Codes Tree Panel",
-  "id": "smart-factory-reason-codes-crud-tree-chart-panel",
-
+  "type": "panel",
   "info": {
-    "description": "Reason Codes Tree for user to CRUD the database",
-    "keywords": ["panel"],
+    "author": {
+      "name": "Spruik Technologies",
+      "email": "info@spruiktec.com",
+      "url": "https://spruiktec.com"
+    },
+    "description": "Libre panel for Create, Read, Update and Delete of Downtime Reasons",
+    "keywords": ["tree", "panel", "libre"],
     "links": [
-      {"name": "Project site", "url": "https://github.com/Billiballa/grafana-table-panel"}
+      {"name": "Project site", "url": "https://github.com/Spruik/Libre-Reason-Codes-CRUD-Tree-Chart-Panel"},
+      {"name": "Issues", "url": "https://github.com/Spruik/Libre-Reason-Codes-CRUD-Tree-Chart-Panel/issues"}
     ],
     "logos": {
       "small": "img/icn-table-panel.svg",
       "large": "img/icn-table-panel.svg"
     },
+    "screenshots": [
+      {"name": "Panel", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel.png"},
+      {"name": "Actions", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel-actions.png"},
+      {"name": "Metrics", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel-metrics.png"},
+      {"name": "Add", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel-add.png"},
+      {"name": "Edit", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel-update.png"},
+      {"name": "Delete", "url": "public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/libre-reason-codes-crud-tree-chart-panel-delete.png"}
+    ],
     "version": "1.0.0",
-    "updated": "2017-06-23"
+    "updated": "2020-06-30"
   },
-  
-  
-
   "dependencies": {
-    "grafanaVersion": "4.x.x",
+    "grafanaVersion": "6.x.x",
     "plugins": [ ]
   }
 }

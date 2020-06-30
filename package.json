@@ -1,25 +1,31 @@
 {
-  "name": "smart-factory-reason-codes-crud-tree-chart-panel",
+  "name": "libre-reason-codes-crud-tree-chart-panel",
   "version": "1.0.0",
-  "description": "Reason Codes Tree for user to CRUD the database",
+  "description": "Libre panel for Create, Read, Update and Delete of Downtime Reasons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Spruik/smart-factory-reason-codes-crud-tree-chart-panel"
+    "url": "https://github.com/Spruik/Libre-Reason-Codes-CRUD-Tree-Chart-Panel"
   },
   "author": "Spruik Technologies",
   "bugs": {
-    "url": "https://github.com/Spruik/smart-factory-reason-codes-crud-tree-chart-panel/issues"
+    "url": "https://github.com/Spruik/Libre-Reason-Codes-CRUD-Tree-Chart-Panel/issues"
   },
   "main": "src/module.js",
   "scripts": {
-    "lint": "eslint --color .",
+    "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "treet",
     "grafana",
     "plugin",
     "panel"
   ],
+  "dependencies": {
+    "echarts": "^4.2.0-rc.2",
+    "lodash": "^4.17.2",
+    "moment": "^2.12.0"
+  },
   "devDependencies": {
     "babel": "~6.5.1",
     "babel-cli": "^6.18.0",
@@ -43,10 +49,5 @@
     "grunt-systemjs-builder": "^0.2.5",
     "load-grunt-tasks": "~3.2.0",
     "standard": "^14.3.4"
-  },
-  "dependencies": {
-    "echarts": "^4.2.0-rc.2",
-    "lodash": "^4.17.2",
-    "moment": "^2.12.0"
   }
 }
