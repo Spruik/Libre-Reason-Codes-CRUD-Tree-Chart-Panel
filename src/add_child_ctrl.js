@@ -77,7 +77,6 @@ function removeListeners () {
  * @param {*} input
  */
 function isInputAvailable (input) {
-  // console.log(filter);
   filter = filter.reduce((arr, d) => {
     arr.push(d.toLowerCase())
     return arr
@@ -102,12 +101,10 @@ function insertNode (input, node, panelCtrl, allData) {
   const line = writeInsertionLine(input, node)
   const url = utils.postgRestHost + 'reason_code'
   utils.post(url, line).then(res => {
-    // console.log(res)
     $('#master-data-reason-code-add-child-cancelBtn').trigger('click')
     utils.alert('success', 'Success', 'A new node has been succeesfully inserted')
     panelCtrl.refresh()
   }).catch(e => {
-    // console.log(e);
     $('#master-data-reason-code-add-child-cancelBtn').trigger('click')
     utils.alert('error', 'Error', 'Error ocurred whiling inserting node into the database, please try agian')
   })

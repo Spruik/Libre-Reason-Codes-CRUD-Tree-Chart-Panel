@@ -44,12 +44,10 @@ function deleteNode (node, panelCtrl) {
   if (url) {
     // http request
     utils.deleteMethod(url).then(res => {
-      // console.log(res)
       $('#master-data-reason-code-delete-confirmation-cancel-btn').trigger('click')
       utils.alert('success', 'Deletion Success', 'The selected node and its children were successfully deleted')
       panelCtrl.refresh()
     }).catch(e => {
-      // console.log(e);
       $('#master-data-reason-code-delete-confirmation-cancel-btn').trigger('click')
       utils.alert('error', 'Error', 'Error occurred while deleting the node from the database, please try agian')
     })

@@ -133,12 +133,10 @@ function startUpdate (input, node, panelCtrl, allData) {
  */
 function normalUpdate (url, line, panelCtrl) {
   utils.update(url, line).then(res => {
-    // console.log(res)
     $('#master-data-reason-code-update-node-cancelBtn').trigger('click')
     utils.alert('success', 'Success', 'A new node has been succeesfully inserted')
     panelCtrl.refresh()
   }).catch(e => {
-    // console.log(e)
     $('#master-data-reason-code-update-node-cancelBtn').trigger('click')
     utils.alert('error', 'Error', 'Error ocurred whiling inserting node into the database, please try agian')
   })
@@ -161,7 +159,6 @@ function updateForReasons (url, line, childUrl, childLine, panelCtrl) {
     utils.alert('success', 'Success', 'A new node has been succeesfully inserted')
     panelCtrl.refresh()
   })).catch(e => {
-    console.log(e)
     $('#master-data-reason-code-update-node-cancelBtn').trigger('click')
     utils.alert('error', 'Error', 'Error ocurred whiling inserting node into the database, please try agian')
   })

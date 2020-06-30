@@ -132,7 +132,6 @@ export class ChartCtrl extends MetricsPanelCtrl {
       let pressTimer
       myChart.on('mouseup', params => {
         clearTimeout(pressTimer)
-        // console.log(params);
         return false
       })
       myChart.on('mousedown', params => {
