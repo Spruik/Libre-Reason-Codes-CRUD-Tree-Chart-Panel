@@ -37,7 +37,7 @@ export function generateOption (data) {
             position: 'left',
             verticalAlign: 'middle',
             align: 'right',
-            fontSize: 10,
+            fontSize: 10
           }
         },
 

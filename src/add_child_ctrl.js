@@ -134,7 +134,7 @@ function writeInsertionLine (input, node) {
  * it will cause 'call stack out of range' error.
  *
  * @param {*} input --> This is the input
- * @param {*} node  --> This is the selected node, which will be the input's parent, because this is a 'add child' method 
+ * @param {*} node  --> This is the selected node, which will be the input's parent, because this is a 'add child' method
  * @param {*} allData --> This is all of the data of the tree, which will be used to find the all of the input's parents
  */
 function isInputValid (input, node, allData) {
