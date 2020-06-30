@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    clean: ['dist'],
+    clean: ['dist', 'libre-reason-codes-crud-tree-chart-panel.zip'],
 
     jshint: {
       options: {
@@ -51,9 +51,28 @@ module.exports = function (grunt) {
         expand: true,
         src: ['plugin.json'],
         dest: 'dist'
+      },
+      readme: {
+        expand: true,
+        src: ['README.md', 'docs/**', 'LICENSE', 'MAINTAINERS'],
+        dest: 'dist'
       }
     },
-
+    'string-replace': {
+      dist: {
+        files: {
+          'dist/README.md': 'dist/README.md'
+        },
+        options: {
+          replacements: [
+            {
+              pattern: /docs\//g,
+              replacement: 'public/plugins/libre-reason-codes-crud-tree-chart-panel/docs/'
+            }
+          ]
+        }
+      }
+    },
     watch: {
       rebuild_all: {
         files: ['src/**/*', 'plugin.json'],
@@ -78,6 +97,16 @@ module.exports = function (grunt) {
           ext: '.js'
         }]
       }
+    },
+    compress: {
+      main: {
+        options: {
+          archive: 'libre-reason-codes-crud-tree-chart-panel.zip'
+        },
+        expand: true,
+        cwd: 'dist/',
+        src: ['**/*']
+      }
     }
   })
   grunt.registerTask('default', [
@@ -85,8 +114,15 @@ module.exports = function (grunt) {
     'clean',
     'copy:src_to_dist',
     'copy:libs',
+    'copy:readme',
     'copy:echarts_libs',
     'copy:pluginDef',
     'copy:image_to_dist',
     'babel'])
+
+  grunt.registerTask('build', [
+    'clean',
+    'default',
+    'compress'
+  ])
 }
