@@ -220,4 +220,9 @@ For any issue, there are fundamentally three ways an individual can contribute:
 
 ## Change log
 
+- 1.0.1 Documentation Updates
+  - Fix subtitle and project path
+  - Expose dev simulator ui
+  - Remove unused grunt config
+
 - 1.0.0 Initial Public Release
