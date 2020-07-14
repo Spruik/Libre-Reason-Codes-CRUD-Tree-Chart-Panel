@@ -1,6 +1,6 @@
 # Reason Codes Tree Panel
 
-| Libre panel for Create, Read, Update and Delete of Downtime Reasons
+> Libre panel for Create, Read, Update and Delete of Downtime Reasons
 
 This panel gives users the ability to visualize the enterprise downtime categories and reasons. By long clicking objects users can create, read, update and delete categories and reasons in the tree. This panel is part of [Libre](https://github.com/Spruik/Libre) suite of Grafana plugins and dashbaords. Downtime reasons can be classified against equipment when the machine reports a downtime state. This plugin interfaces to a no security json rest api for equipment running on the same grafana server. This panel is targeted at Grafana v6.x.x only.
 
@@ -84,7 +84,7 @@ Start by cloning this repository
 ```shell
 ~/
 $ git clone https://github.com/Spruik/Libre-Reason-Codes-CRUD-Tree-Chart-Panel
-Cloning into 'libre-reason-codes-crud-tree-chart-panel'...
+Cloning into 'Libre-Reason-Codes-CRUD-Tee-Chart-Panel'...
 remote: Enumerating objects: 46, done.
 remote: Counting objects: 100% (46/46), done.
 remote: Compressing objects: 100% (31/31), done.
@@ -95,8 +95,8 @@ Unpacking objects: 100% (46/46), done.
 Enter project and install dependencies
 
 ```shell
-$ cd ./libre-reason-codes-crud-tree-chart-panel
-~/libre-reason-codes-crud-tree-chart-panel
+$ cd ./Libre-Reason-Codes-CRUD-Tee-Chart-Panel
+~/Libre-Reason-Codes-CRUD-Tee-Chart-Panel
 $ npm install
 ...
 added 714 packages from 399 contributors and audited 719 packages in 11.871s
@@ -117,16 +117,23 @@ Run grunt to build the panel
 
 ```shell
 $ grunt
+Running "clean:0" (clean) task
+>> 1 path cleaned.
+
+Running "clean:1" (clean) task
+>> 1 path cleaned.
 
 Running "copy:src_to_dist" (copy) task
-Created 2 directories, copied 8 files
+Created 3 directories, copied 8 files
 
-Running "copy:libs" (copy) task
+Running "copy:readme" (copy) task
+Created 1 directory, copied 10 files
+
+Running "copy:echarts_libs" (copy) task
+Copied 1 file
 
 Running "copy:pluginDef" (copy) task
 Copied 1 file
-
-Running "copy:image_to_dist" (copy) task
 
 Running "babel:dist" (babel) task
 
@@ -137,18 +144,18 @@ Done, without errors.
 Start docker-compose.dev.yml detached
 
 ```shell
-~/libre-reason-codes-crud-tree-chart-panel
+~/Libre-Reason-Codes-CRUD-Tee-Chart-Panel
 $ docker-compose -f docker-compose.dev.yml up -d
-Starting libre-opation-crud-table-panel_postgres_1
-Starting libre-opation-crud-table-panel_postrest_1
-Starting libre-opation-crud-table-panel_simulator_1
-Starting libre-opation-crud-table-panel_grafana_1
+Starting libre-reason-codes-crud-tree-chart-panel_postgres_1
+Starting libre-reason-codes-crud-tree-chart-panel_postrest_1
+Starting libre-reason-codes-crud-tree-chart-panel_simulator_1
+Starting libre-reason-codes-crud-tree-chart-panel_grafana_1
 ```
 
 Run grunt watch to recompile on change
 
 ```shell
-~/libre-reason-codes-crud-tree-chart-panel
+~/Libre-Reason-Codes-CRUD-Tee-Chart-Panel
 $ grunt watch
 Running "watch" task
 Waiting...
@@ -166,26 +173,28 @@ Prerequisites
 Build panel and zip into archive
 
 ```shell
-~/libre-reason-codes-crud-tree-chart-panel
+~/Libre-Reason-Codes-CRUD-Tee-Chart-Panel
 $ grunt build
 Running "clean:0" (clean) task
 >> 1 path cleaned.
 
 Running "clean:1" (clean) task
->> 1 path cleaned.
+>> 0 paths cleaned.
+
+Running "clean:0" (clean) task
+>> 0 paths cleaned.
+
+Running "clean:1" (clean) task
+>> 0 paths cleaned.
 
 Running "copy:src_to_dist" (copy) task
-Created 3 directories, copied 9 files
-
-Running "copy:libs" (copy) task
-
+Created 3 directories, copied 8 files
 
 Running "copy:readme" (copy) task
-Created 1 directory, copied 8 files
+Created 1 directory, copied 10 files
 
-Running "string-replace:dist" (string-replace) task
-
-1 files created
+Running "copy:echarts_libs" (copy) task
+Copied 1 file
 
 Running "copy:pluginDef" (copy) task
 Copied 1 file
@@ -193,9 +202,10 @@ Copied 1 file
 Running "babel:dist" (babel) task
 
 Running "compress:main" (compress) task
->> Compressed 44 files.
+>> Compressed 41 files.
 
 Done, without errors.
+
 ```
 
 Find a completed build of this panel in the root directory named `libre-reason-codes-crud-tree-chart-panel.zip`.
@@ -209,5 +219,10 @@ For any issue, there are fundamentally three ways an individual can contribute:
 - By helping to resolve the issue: Typically, this is done either in the form of demonstrating that the issue reported is not a problem after all, or more often, by opening a Pull Request that changes some bit of something in the panel in a concrete and reviewable manner.
 
 ## Change log
+
+- 1.0.1 Documentation Updates
+  - Fix subtitle and project path
+  - Expose dev simulator ui
+  - Remove unused grunt config
 
 - 1.0.0 Initial Public Release
