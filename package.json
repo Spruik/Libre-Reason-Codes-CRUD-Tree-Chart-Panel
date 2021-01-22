@@ -1,6 +1,6 @@
 {
   "name": "libre-reason-codes-crud-tree-chart-panel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Libre panel for Create, Read, Update and Delete of Downtime Reasons",
   "repository": {
     "type": "git",
